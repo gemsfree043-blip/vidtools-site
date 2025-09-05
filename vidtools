@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VidTools — أدوات فيديو خفيفة وسهلة</title>
+  <meta name="description" content="مجموعة أدوات مجانية لتحرير وتقسيم الفيديو — VidSplit وأدوات أخرى قريباً.">
+  <meta property="og:title" content="VidTools — أدوات فيديو">
+  <meta property="og:description" content="مجموعة أدوات مجانية لتحرير وتقسيم الفيديو — VidSplit وأدوات أخرى قريباً.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/og-image.png">
+  <link rel="icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: dark; }
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(8px); }
+    .grad { background: radial-gradient(1200px 600px at 80% -20%, #1e40af33, transparent),
+                         radial-gradient(1000px 600px at -10% 120%, #16a34a22, transparent); }
+  </style>
+</head>
+<body class="min-h-screen bg-neutral-950 text-neutral-100 grad">
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-semibold text-lg">
+        <span class="inline-block w-8 h-8 rounded-xl bg-emerald-500/20 border border-emerald-400/40 grid place-items-center">
+          <span class="text-emerald-300">VT</span>
+        </span>
+        VidTools
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
+        <a href="#tools" class="hover:text-white">الأدوات</a>
+        <a href="#download" class="hover:text-white">التحميل</a>
+        <a href="#contact" class="hover:text-white">تواصل</a>
+      </nav>
+      <a href="#download" class="px-3 py-1.5 rounded-xl bg-emerald-500 text-black font-semibold hover:bg-emerald-400 transition">تحميل</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+        أدوات فيديو خفيفة، <span class="text-emerald-400">نتيجة سريعة</span>
+      </h1>
+      <p class="mt-4 text-neutral-300 md:text-lg">
+        ابدأ بـ <strong>VidSplit</strong> لتقسيم الفيديو بسهولة (حسب المدة أو عدد الأجزاء) مع واجهة بسيطة ودعم FFmpeg.
+        سنضيف أدوات جديدة تباعاً.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#download" class="px-4 py-2 rounded-xl bg-emerald-500 text-black font-semibold hover:bg-emerald-400 transition">تحميل VidSplit</a>
+        <a href="#tools" class="px-4 py-2 rounded-xl border border-white/15 hover:border-white/30 transition">استعراض الأدوات</a>
+      </div>
+      <div class="mt-6 text-xs text-neutral-400">يعمل على Windows • لا يتطلب تثبيت بايثون للمستخدم النهائي</div>
+    </div>
+    <div class="glass rounded-3xl p-6 border border-white/10">
+      <div class="grid gap-4">
+        <div class="rounded-2xl bg-black/40 border border-white/10 p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">VidSplit (تقسيم الفيديو)</h3>
+            <span class="text-xs px-2 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">v1.0</span>
+          </div>
+          <ul class="mt-3 text-sm list-disc pr-5 text-neutral-300 space-y-1">
+            <li>تقسيم حسب المدة أو عدد الأجزاء</li>
+            <li>اختيار صيغة الإخراج (MP4/MKV/AVI/MOV)</li>
+            <li>عرض معلومات الفيديو + شريط تقدم</li>
+            <li>فتح مجلد الناتج تلقائياً</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-black/40 border border-white/10 p-5 opacity-70">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">CompressX (ضغط الفيديو)</h3>
+            <span class="text-xs px-2 py-1 rounded-lg border border-white/10">قريباً</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-400">ضغط الفيديو بجودات متعددة (YouTube/WhatsApp/Custom).</p>
+        </div>
+        <div class="rounded-2xl bg-black/40 border border-white/10 p-5 opacity-70">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">ThumbGen (استخراج صور مصغّرة)</h3>
+            <span class="text-xs px-2 py-1 rounded-lg border border-white/10">قريباً</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-400">توليد لقطات صور من الفيديو بفواصل زمنية محددة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Grid -->
+  <section id="tools" class="mx-auto max-w-7xl px-4 py-8">
+    <h2 class="text-2xl md:text-3xl font-bold">الأدوات المتاحة</h2>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card: VidSplit -->
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-5 flex flex-col">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold text-lg">VidSplit</h3>
+          <span class="text-xs px-2 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">Windows</span>
+        </div>
+        <p class="mt-3 text-neutral-300 text-sm flex-1">أداة تقسيم الفيديو بواجهة رسومية خفيفة مبنية على FFmpeg وTkinter.</p>
+        <div class="mt-4 flex gap-3">
+          <a href="#download" class="px-3 py-1.5 rounded-xl bg-emerald-500 text-black text-sm font-semibold hover:bg-emerald-400">تحميل</a>
+          <a href="#docs" class="px-3 py-1.5 rounded-xl border border-white/15 text-sm hover:border-white/30">التوثيق</a>
+        </div>
+      </article>
+      <!-- Placeholder cards for future tools -->
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-5 opacity-70">
+        <h3 class="font-semibold">CompressX</h3>
+        <p class="mt-2 text-sm text-neutral-400">ضغط الفيديو مع إعدادات مسبقة.</p>
+      </article>
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-5 opacity-70">
+        <h3 class="font-semibold">ThumbGen</h3>
+        <p class="mt-2 text-sm text-neutral-400">استخراج صور مصغّرة تلقائياً.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Download / CTA -->
+  <section id="download" class="mx-auto max-w-7xl px-4 py-16">
+    <div class="glass rounded-3xl p-8 border border-white/10">
+      <h2 class="text-2xl md:text-3xl font-bold">حمّل VidSplit</h2>
+      <p class="mt-2 text-neutral-300">آخر نسخة موقّعة ومضغوطة للاستخدام على Windows. سنضيف إصدارات أخرى لاحقاً.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/downloads/VidSplit_v1.0.zip" class="px-4 py-2 rounded-xl bg-emerald-500 text-black font-semibold hover:bg-emerald-400">تحميل (ZIP)</a>
+        <a href="https://github.com/yourname/vidtools" class="px-4 py-2 rounded-xl border border-white/15 hover:border-white/30">المصدر على GitHub</a>
+        <a href="#changelog" class="px-4 py-2 rounded-xl border border-white/15 hover:border-white/30">سجل التغييرات</a>
+      </div>
+      <ul class="mt-6 text-sm text-neutral-400 list-disc pr-5">
+        <li>متطلبات: Windows 10/11، FFmpeg في PATH (أو نسخة مدمجة بداخل التطبيق).</li>
+        <li>التحقق من التوقيع والهاش قبل التشغيل (SHA256 مرفق).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold">تواصل معنا</h2>
+    <p class="mt-2 text-neutral-300">للمقترحات والإبلاغ عن الأخطاء.</p>
+    <form action="https://formspree.io/f/your-id" method="POST" class="mt-6 grid gap-4 max-w-xl">
+      <input name="name" required placeholder="الاسم" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 outline-none focus:border-emerald-400/60" />
+      <input type="email" name="email" required placeholder="البريد الإلكتروني" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 outline-none focus:border-emerald-400/60" />
+      <textarea name="message" rows="4" required placeholder="رسالتك" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 outline-none focus:border-emerald-400/60"></textarea>
+      <button class="justify-self-start px-4 py-2 rounded-xl bg-emerald-500 text-black font-semibold hover:bg-emerald-400">إرسال</button>
+    </form>
+  </section>
+
+  <footer class="border-t border-white/10 py-8 text-sm text-neutral-400">
+    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p>© <span id="y"></span> VidTools — جميع الحقوق محفوظة</p>
+      <div class="flex items-center gap-4">
+        <a href="#privacy" class="hover:text-neutral-200">الخصوصية</a>
+        <a href="#terms" class="hover:text-neutral-200">الشروط</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
